@@ -4,7 +4,7 @@ from fvcore.nn.jit_analysis import JitModelAnalysis
 from fvcore.nn.jit_handles import Handle
 from torch import nn, Tensor
 
-from elem_count_handles import (
+from .elem_count_handles import (
     addmm_elem_jit,
     bmm_elem_jit,
     conv_elem_jit,

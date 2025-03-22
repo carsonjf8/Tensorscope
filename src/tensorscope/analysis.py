@@ -4,17 +4,7 @@ from fvcore.nn import FlopCountAnalysis
 from tabulate import tabulate
 import torch
 
-from elem_count import ElemCountAnalysis
-
-# supported precisions to analyze
-SUPPORTED_PRECISIONS = [
-    'fp64', # FP64 true
-    'fp32', # FP32 true
-    'fp16-mixed', # FP16 AMP
-    'fp16-true', # FP16 true
-    'bf16-mixed', # BF16 AMP
-    'bf16-true' # BF16 true
-]
+from tensorscope import ElemCountAnalysis
 
 # number of bytes in each element for each precision
 PRECISION_TO_BYTES = {
@@ -42,7 +32,7 @@ def analyze_model(model: torch.nn.Module, input_shapes: list[tuple], gpu: str, p
     inputs = tuple([torch.randn(shape) for shape in input_shapes])
 
     # ensure precision is recognized
-    if precision not in SUPPORTED_PRECISIONS:
+    if precision not in PRECISION_TO_BYTES:
         raise ValueError(f'Unexpected precision value: {precision}')
     
     # analyze model for FLOP and elements read/written counts
