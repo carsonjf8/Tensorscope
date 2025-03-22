@@ -20,7 +20,7 @@ Tensorscope contains a class called ElemCountAnalysis that counts the number of 
 ```
 import torch
 from torchvision.models import resnet18
-from elem_count import ElemCountAnalysis
+from tensorscope import ElemCountAnalysis
 
 model = resnet18()
 inputs = (torch.randn(32, 3, 224, 224))
