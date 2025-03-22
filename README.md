@@ -11,9 +11,8 @@ Tensorscope is an extension of the [fvcore](https://github.com/facebookresearch/
 * Estimation of the forward pass time for the given model, data, precision, and GPU
 
 ## Installation
-Install dependencies using the `requirements.txt` file.
 ```
-pip install -r requirements.txt
+pip install tensorscope
 ```
 
 ## Element Counting
