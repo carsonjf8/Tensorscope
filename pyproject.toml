@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tensorscope"
-version = "1.0.0"
+version = "1.0.1"
 description = "Analyze PyTorch models to determine limiting factors in each layer."
 readme = "README.md"
 requires-python = ">=3.8"
